@@ -4,7 +4,7 @@ import { PokemonsRes, PokemonsTypesRes } from '@/types/api'
 
 async function getData({ limit, offset }: Props['searchParams']): Promise<{
   pokemons: PokemonsRes
-  types: PokemonsTypesRes
+  types: PokemonsTypesRes['results']
 }> {
   const res = await fetch(
     process.env.URL + `/api/pokemons?limit=${limit}&offset=${offset}`,
