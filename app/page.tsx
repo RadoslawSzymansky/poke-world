@@ -30,14 +30,14 @@ export default async function Home({ searchParams }: Props) {
 
   return (
     <main className="container max-w-screen-lg mx-auto">
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap gap-4">
         {pokemons.results.map(({ name, url }) => {
           return (
             <PokemonCard key={name} pokemon={{ name, url }} types={types} />
           )
         })}
       </div>
-      <Pagination />
+      <Pagination count={pokemons.count} />
     </main>
   )
 }

@@ -4,10 +4,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { pokemonId: string } }
 ) {
-  console.log('name', params.pokemonId)
-  const data = await fetch(`https://pokeapi.co/api/v2/pokemon/12/`, {
-    cache: 'no-cache',
-  })
+  const data = await fetch(`https://pokeapi.co/api/v2/pokemon/12/`, {})
   const res = await data.json()
 
   try {

@@ -16,7 +16,7 @@ export default function PokemonCard({
   return (
     <Link
       href={`/pokemons/${name}`}
-      className="relative m-2 p-4 rounded bg-gradient-to-b from-yellow1 to-yellow2 shadow-white shadow-sm text-center text-black hover:scale-102"
+      className="relative p-4 rounded bg-gradient-to-b from-yellow1 to-yellow2 shadow-white shadow-sm text-center text-black hover:scale-102 grow=[0] poke-card"
     >
       <div className="absolute left-6 top-6 text-slate-500 italic">
         #{pokemonId}
