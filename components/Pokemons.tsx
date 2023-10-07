@@ -25,8 +25,8 @@ type Props = {
   }
 }
 
-export default async function Home(props: Props) {
-  const { pokemons, types } = await getData(props.searchParams)
+export default async function Pokemons({ searchParams }: Props) {
+  const { pokemons, types } = await getData(searchParams)
 
   return (
     <main className="container max-w-screen-lg mx-auto">

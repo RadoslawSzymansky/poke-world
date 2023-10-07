@@ -9,7 +9,6 @@ type PaginationProps = {
 
 export default function Pagination({ count }: PaginationProps) {
   const searchParams = useSearchParams()
-
   const limitParam = searchParams.get('limit')
   const offsetParam = searchParams.get('offset')
   const limit = (Number.isInteger(Number(limitParam)) ? +limitParam! : 20) || 20
@@ -32,7 +31,7 @@ export default function Pagination({ count }: PaginationProps) {
       >
         {`<`}
       </Link>
-      <div className="mx-auto">Page: {page}</div>
+      <div className="mx-auto">Page: {page.toFixed(0)}</div>
       <Link
         href={`/?offset=${page * limit}&limit=${limit}`}
         className={offset >= lastPageOffset ? 'text-stone-500' : ''}
