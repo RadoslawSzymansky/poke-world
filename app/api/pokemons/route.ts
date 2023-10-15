@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(request: NextRequest) {
-  console.log('pobiera')
   const limitParam = request.nextUrl.searchParams.get('limit')
   const offsetParam = request.nextUrl.searchParams.get('offset')
 

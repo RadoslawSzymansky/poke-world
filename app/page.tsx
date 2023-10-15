@@ -30,14 +30,19 @@ export default async function Home(props: Props) {
 
   return (
     <main className="container max-w-screen-lg mx-auto">
-      <div className="flex flex-wrap gap-4">
+      <div className="pokemons-wrapper flex flex-wrap gap-4">
         {pokemons.results.map(({ name, url }) => {
           return (
             <PokemonCard key={name} pokemon={{ name, url }} types={types} />
           )
         })}
+        {!pokemons?.results.length && (
+          <div className="min-h-6 text-center center w-full text-xl my-8">
+            No <br /> data
+          </div>
+        )}
       </div>
-      <Pagination count={pokemons.count} />
+      <Pagination count={pokemons.count} pokemons={pokemons} />
     </main>
   )
 }

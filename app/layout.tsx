@@ -18,9 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navigation />
-        <main>{children}</main>
-        <footer className="container max-w-screen-lg mx-auto">Footer</footer>
+        <div className="w-100 h-100 flex flex-col min-h-screen">
+          <Navigation />
+          <main>{children}</main>
+          <footer className="container max-w-screen-lg mx-auto mt-auto">
+            Footer
+          </footer>
+        </div>
       </body>
     </html>
   )

@@ -19,8 +19,6 @@ export default async function PokemonPage({
 }) {
   const pokemon = await getData(id)
 
-  console.log('po', pokemon)
-
   return (
     <div>
       Pokomon pahge {id}
